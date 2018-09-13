@@ -11,6 +11,12 @@
 */
 const sum = (a, b) => {
   /* your logic here...*/
+  let sum = a + b;
+
+  console.log("Sum = ", sum)
 };
+sum(1, 2);
+sum(0, 5);
+sum(-1, 13);
 
 export default sum;

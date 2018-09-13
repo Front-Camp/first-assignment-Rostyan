@@ -7,8 +7,12 @@
  * turnMeBaby('hello');     // 'olleh'
  * turnMeBaby('Some text'); // 'txet emoS'
  */
-const turnMeBaby = str => {
-  /* your logic here...*/
-};
+function turnMeBaby(str){
+  let reversed = "";
+  for(let char of str){
+    reversed = char + reversed;
+  }
+  return reversed;
+}
 
 export default turnMeBaby;

@@ -8,6 +8,14 @@
 */
 const max = arr => {
   /* your logic here...*/
+  for (var i = 0; i < max.length; i++) {
+    if (max[i] > max[0]) {
+      max[0] = max[i];
+    }
+  }
 };
+
+max([1, 2, 4]);
+max([-1, 0]);
 
 export default max;

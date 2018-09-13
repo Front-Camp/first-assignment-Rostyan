@@ -10,8 +10,18 @@
  * sumElements(['1', 'hi', 3]);     // 4
  * sumElements([Infinity, NaN, 1]); // 1
  */
-const sumElements = arr => {
+function sumElements() {
   /* your logic here...*/
+    return Array.from(arguments).reduce((sum, value) => {
+      if (Array.isArray(value)) {
+        sum += sumElements.apply(this, value)
+      } else {
+        sum += Number(value)
+      }
+
+      return sum
+    }, 0)
+
 };
 
 export default sumElements;
